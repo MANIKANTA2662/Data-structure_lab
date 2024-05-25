@@ -11,7 +11,7 @@ void delete();
 void display();
 int main()
 {
-    printf("\n1.insert\n2.delete\n3.display\n4.exit");
+    printf("1.insert\n2.delete\n3.display\n4.exit");
     while(1)
     {
         int ch;
@@ -73,14 +73,14 @@ void display()
     } 
     else
     {
-        printf("The queue is \n");
+        printf("The queue elements are \n");
         temp = front;
         while (temp)
         {
             printf("%d->", temp -> data);
             temp = temp -> next;
         }
-        printf("NULL\n\n");
+        printf("NULL\n");
     }
 }
 
