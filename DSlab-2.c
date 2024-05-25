@@ -215,7 +215,7 @@ void search()
         {  
             if(ptr->data == item)  
             {  
-                printf("item found at location %d ",i+1);  
+                printf("item found at location %d ",i);  
                 flag=0;  
             }   
             else  
