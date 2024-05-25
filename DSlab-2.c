@@ -181,7 +181,7 @@ void random_delete()
     printf("\n Enter the location of the node after  you want to perform deletion \n");  
     scanf("%d",&loc);  
     ptr=head;  
-    for(i=0;i<loc-1;i++)  
+    for(i=0;i<loc;i++)  
     {  
         ptr1 = ptr;       
         ptr = ptr->next;  
