@@ -73,14 +73,15 @@ void insert_beg(){
     display();
 }
 void insert(){
-    int n;
-    printf("Enter the element\n ");
-    scanf("%d",&n);
-    for(int i=n-1;i>0;i--)
+    int index,value;
+    printf("Enter the value and index\n ");
+    scanf("%d%d",&value,&index);
+    for(int i=ind;i>index;i--)
     {
         a[i]=a[i-1];
-        display();
     }
+    a[index]=value;
+    display();
 }
 void delete(){
     int value;
