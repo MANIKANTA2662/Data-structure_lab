@@ -53,7 +53,7 @@ void delete()
  {
     if (front == NULL)
     {
-        printf("\nUnderflow\n");
+        printf("Underflow\n");
     }
      else 
     {
@@ -69,7 +69,7 @@ void display()
     struct node * temp;
     if ((front == NULL) && (rear == NULL)) 
     {
-        printf("\nQueue is Empty\n");
+        printf("Queue is Empty\n");
     } 
     else
     {
