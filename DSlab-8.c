@@ -3,7 +3,7 @@
 struct node{
     int data;
     struct node *next;
-}
+};
 struct node *front;
 struct node *rear;
 void insert();
@@ -11,10 +11,10 @@ void delete();
 void display();
 int main()
 {
+    printf("\n1.insert\n2.delete\n3.display\n4.exit");
     while(1)
     {
         int ch;
-        printf("\n1.insert\n2.delete\n3.display\n4.exit");
         printf("Enter the ur choice\n");
         scanf("%d",&ch);
         switch (ch)
@@ -27,3 +27,61 @@ int main()
     }
     return 0;
 }
+void insert() 
+{
+    int value;
+    printf("Enter element value\n");
+    scanf("%d",&value);
+    struct node * ptr;
+    ptr = (struct node * ) malloc(sizeof(struct node));
+    ptr -> data = value;
+    ptr -> next = NULL;
+    if ((front == NULL) && (rear == NULL))
+     {
+        front = rear = ptr;
+        display();
+    } 
+    else
+     {
+        rear -> next = ptr;
+        rear = ptr;
+        display();
+    }
+    
+}
+void delete()
+ {
+    if (front == NULL)
+    {
+        printf("\nUnderflow\n");
+    }
+     else 
+    {
+        struct node * temp = front;
+        int temp_data = front -> data;
+        front = front -> next;
+        free(temp);
+        display();
+    }
+}
+void display()
+{
+    struct node * temp;
+    if ((front == NULL) && (rear == NULL)) 
+    {
+        printf("\nQueue is Empty\n");
+    } 
+    else
+    {
+        printf("The queue is \n");
+        temp = front;
+        while (temp)
+        {
+            printf("%d->", temp -> data);
+            temp = temp -> next;
+        }
+        printf("NULL\n\n");
+    }
+}
+
+   
