@@ -55,15 +55,15 @@ void push(){
 }
 void pop(){
     int data;
-    struct node *ptr;
+    struct node *ptr=head;
     if(head==NULL)
     {
         printf("Underflow");
     }
     else{
-        data=head->data;
-        ptr=head;
-        head=head->next;
+       ptr=head;
+        printf("pop element is %d",ptr->data);
+        head=ptr->next;
         free(ptr);
         display();
     }
